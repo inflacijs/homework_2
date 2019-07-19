@@ -1,3 +1,4 @@
+
 :root {
     --primary: #dddddd;
     --dark: #333333;
@@ -104,6 +105,7 @@ text-shadow:   1px 1px #000000;
     color:white;
   }
 
+  
   /* here starts header media queries */
   @media (min-width: 576px){
     .header{
@@ -156,15 +158,11 @@ text-shadow:   1px 1px #000000;
 /* Here starts a body */
 
 .item4 {
-    background: rgb(250, 135, 135);
+  
     grid-area: hero;
-    display:none;
+    
   }
   
-  .item5 {
-    background: rgb(162, 122, 255);
-    grid-area: hero_c;
-  }
   
   .item6 {
     background: rgb(175, 238, 180);
@@ -175,7 +173,7 @@ text-shadow:   1px 1px #000000;
   }
   
   .item8 {
-    background: rgb(194, 221, 228);
+    
     grid-area: article_li;
   }
   
@@ -193,23 +191,110 @@ text-shadow:   1px 1px #000000;
     display: grid;
     grid-template-columns: 1fr ;
     grid-template-rows: 1fr 1fr 1fr 50%;
-    /* Rindām vajagot auto, kristaps teica. To vajga papētīt */
     grid-gap: 20px;
     grid-template-areas:
-      "hero_c "
+      "hero"
       "article"
       "ad"
       "article_li";
     margin-top:20px;
     margin-bottom: 20px;
   }
-/* here starts body media queries */
+
+  /* hero */ 
+.hero-image {
+  background-image:linear-gradient(rgba(41, 38, 38, 0.5), rgba(37, 31, 31, 0.993)), url(/img/photographer.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-blend-mode: overlay;
+  position:relative;
+  height:241px;
+}
+.capture {
+  color:lightgrey;
+  /* padding: 75px 125px;
+  padding-left:150px; */
+  font-size:2em;
+  font-family: 'Lobster', cursive;
+  opacity: 0.6;
+  white-space: nowrap;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 2px;
+}
+/* Sākas hero poga */
+.myButton {
+	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
+	background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
+	background-color:#5b5e5d;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#c7c5c5;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
+	background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
+	background-color:#6c7c7c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.kaka {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 241px;
+  padding:30px;
+  box-sizing: border-box;
+  
+}
+/* Main contain */
+.paragraph {
+  margin: 50px;
+}
+.title {
+  text-align: center;
+}
+/* comercial ad!! */
+.img-ad {
+  height: 100%;
+  width: 100%
+}
+
+ /* here starts body media queries */
 
     @media (min-width: 576px){
-        .item4 {
-            display:block;  
-            /* To hide hero in mobilde version */
-        }
+        
         .item9 {
             display: block;
         }
@@ -218,10 +303,13 @@ text-shadow:   1px 1px #000000;
           grid-template-rows: 1fr 1fr 2fr 5fr 2fr;
           grid-template-areas: 
             "hero hero"
-            "hero_c hero_c"
+            "hero hero"
             "article ad"
             "article_li article_li"
             "sidebar sidebar ";
+        }
+        .capture {
+          font-size:3em;
         }
       }
       
@@ -238,9 +326,12 @@ text-shadow:   1px 1px #000000;
           grid-template-columns: 1fr 1fr 1fr 1fr;
           grid-template-rows: 2fr 6fr;
           grid-template-areas:
-          "hero hero hero_c ad"
+          "hero hero hero ad"
           "article article_li article_li sidebar"
             
+        }
+        .capture {
+          font-size:4em;
         }
     }
         /* Here ends media queries */
