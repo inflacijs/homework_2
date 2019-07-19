@@ -58,6 +58,34 @@ html {
       
       
   }
+/* Button */
+  .more {
+    background:    #0a0e11;
+    background:    linear-gradient(#3d85c6, #0a0e11 50%, #3d85c6);
+    border:        1px solid #556699;
+    border-radius: 1000px;
+    box-shadow:    0 1px #444444;
+    padding:       8px 21px;
+    color:         #ffffff;
+display:       inline-block;
+font:          normal bold 24px/1 "Droid Serif", serif;
+text-align:    center;
+text-shadow:   1px 1px #000000;
+
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  /* navigation */
+
+  .navi {
+    list-style:none;
+  }
+
+
   /* here starts header media queries */
   @media (min-width: 576px){
     .header{
@@ -207,45 +235,4 @@ html {
             grid-template-areas:
               "footer";
         }
-        /* ===========================
-   ====== Search Box ====== 
-   =========================== */
-
-.search
-{
-	border: 2px solid #CF5C3F;
-	overflow: auto;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-
-.search input[type="text"]
-{
-	border: 0px;
-	width: 67%;
-	padding: 10px 10px;
-}
-
-.search input[type="text"]:focus
-{
-	outline: 0;
-}
-
-.search input[type="submit"]
-{
-	border: 0px;
-	background: none;
-	background-color: #CF5C3F;
-	color: #fff;
-	float: right;
-	padding: 10px;
-	border-radius-top-right: 5px;
-	-moz-border-radius-top-right: 5px;
-	-webkit-border-radius-top-right: 5px;
-	border-radius-bottom-right: 5px;
-	-moz-border-radius-bottom-right: 5px;
-	-webkit-border-radius-bottom-right: 5px;
-        cursor:pointer;
-}
-
+    
