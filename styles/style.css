@@ -1,0 +1,209 @@
+:root {
+    --primary: #dddddd;
+    --dark: #333333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104 0.8);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+/* Here starts header container */
+.item1 {
+    width: 350px;
+    height:175px;
+}
+.item1 img {
+    width: 100%;
+    height: auto;
+    padding-top:35px;
+}
+.brand {
+    display:block;
+   
+}
+.item1 {
+    
+    grid-area: brand;
+  }
+  
+  .item2 {
+    
+    grid-area: global;
+  }
+  
+  .item3 {
+    background: PaleTurquoise;
+    grid-area: tools;
+  }
+ 
+  
+  .header {
+    font-size: 1.5em;
+    min-height: 150px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+      "brand brand"
+      "global tools";
+    margin-top:20px;
+    margin-bottom: 20px;
+      
+      
+  }
+  /* here starts header media queries */
+  @media (min-width: 576px){
+    .header{
+      grid-template-columns: 1fr 50% 1fr;
+      grid-template-rows: 1fr ;
+      grid-template-areas:
+        "brand  global tools"
+    }
+    .item1 {
+        width: 150px;
+        height:75px;
+    }
+    .item1 img {
+        width: 100%;
+        height: auto;
+        padding-top:70px;
+  } }
+  
+  @media (min-width: 992px){
+    .header{
+      
+      grid-template-columns: 1fr 60% 2fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      "brand global tools"
+        
+    }
+    .item1 {
+        width: 150px;
+        height:75px;
+    }
+    .item1 img {
+        width: 100%;
+        height: auto;
+        padding-top:70px;
+}   }
+    
+/* Here ends header container */
+
+/* Here starts a body */
+
+.item4 {
+    background: rgb(250, 135, 135);
+    grid-area: hero;
+    display:none;
+  }
+  
+  .item5 {
+    background: rgb(162, 122, 255);
+    grid-area: hero_c;
+  }
+  
+  .item6 {
+    background: rgb(175, 238, 180);
+    grid-area: article;
+  }
+  .item7 {
+    grid-area: ad;
+  }
+  
+  .item8 {
+    background: rgb(194, 221, 228);
+    grid-area: article_li;
+  }
+  
+  .item9 {
+    background: rgb(225, 228, 87);
+    grid-area: sidebar;
+    display:none;
+  }
+
+  .body {
+    font-size: 1.5em;
+    min-height: 700px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 50%;
+    /* Rindām vajagot auto, kristaps teica. To vajga papētīt */
+    grid-gap: 20px;
+    grid-template-areas:
+      "hero_c "
+      "article"
+      "ad"
+      "article_li";
+    margin-top:20px;
+    margin-bottom: 20px;
+  }
+/* here starts body media queries */
+
+    @media (min-width: 576px){
+        .item4 {
+            display:block;  
+            /* To hide hero in mobilde version */
+        }
+        .item9 {
+            display: block;
+        }
+        .body{
+          grid-template-columns: 3fr 1fr;
+          grid-template-rows: 1fr 1fr 2fr 5fr 2fr;
+          grid-template-areas: 
+            "hero hero"
+            "hero_c hero_c"
+            "article ad"
+            "article_li article_li"
+            "sidebar sidebar ";
+        }
+      }
+      
+      @media (min-width: 992px){
+        .item4 {
+            display:block;  
+            /* to hide hero in mobile version*/
+        }
+        .item9 {
+            display: block;
+        }
+        .body{
+          
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 2fr 6fr;
+          grid-template-areas:
+          "hero hero hero_c ad"
+          "article article_li article_li sidebar"
+            
+        }
+    }
+        /* Here ends media queries */
+
+
+        /* Here starts footer */
+        .item10 {
+            grid-area: footer;
+            background-color: bisque;
+        }
+
+        .footer {
+            font-size: 1.5em;
+            min-height: 100px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr ;
+            grid-template-areas:
+              "footer";
+        }
