@@ -221,7 +221,7 @@ text-shadow:   1px 1px #000000;
 
   /* hero */ 
 .hero-image {
-  background-image:linear-gradient(rgba(41, 38, 38, 0.5), rgba(37, 31, 31, 0.993)), url("/img/photographer.jpg");
+  background-image:linear-gradient(rgba(41, 38, 38, 0.5), rgba(37, 31, 31, 0.993)), url("https://images.unsplash.com/photo-1464160551369-33c49e545109?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9");
   background-size: cover;
   background-repeat:no-repeat;
   background-position:center;
