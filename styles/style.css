@@ -1,8 +1,5 @@
 
-:root {
-   
-    --shadow: 0 1px 5px rgba(104, 104, 104 0.8);
-}
+
 
 html {
     box-sizing: border-box;
@@ -184,6 +181,8 @@ text-shadow:   1px 1px #000000;
   }
   .item7 {
     grid-area: ad;
+    
+    border-radius: 10px;
     
     
   }
