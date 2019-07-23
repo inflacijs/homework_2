@@ -221,7 +221,7 @@ text-shadow:   1px 1px #000000;
 
   /* hero */ 
 .hero-image {
-  background-image:linear-gradient(rgba(41, 38, 38, 0.5), rgba(37, 31, 31, 0.993)), url('img/photographer.jpg');
+  background-image:linear-gradient(rgba(41, 38, 38, 0.5), rgba(37, 31, 31, 0.993)), url("/img/photographer.jpg");
   background-size: cover;
   background-repeat:no-repeat;
   background-position:center;
