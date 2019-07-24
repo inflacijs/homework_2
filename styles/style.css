@@ -59,7 +59,7 @@ html {
 /* Button */
   .more {
     background:    #0a0e11;
-    background:    linear-gradient(#3d85c6, #0a0e11 50%, #3d85c6);
+    background:    linear-gradient(#640202, #0a0e11 50%, #550516);
     border:        1px solid #556699;
     border-radius: 1000px;
     box-shadow:    0 1px #444444;
@@ -308,7 +308,7 @@ text-shadow:   1px 1px #000000;
 }
 /* comercial ad!! */
 .img-ad {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   border-radius: 5px;
 }
@@ -342,7 +342,7 @@ text-shadow:   1px 1px #000000;
           display:block;
         }
        .img-ad {
-         max-height: 241px;
+         max-height: auto;
        }
       }
       
